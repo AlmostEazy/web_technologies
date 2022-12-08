@@ -2,6 +2,9 @@
 
 function showMessage(){
     let name = prompt("Как Вас зовут?");
+    if(name === "" || name === null) {
+        alert("Здравствуй Аноним!")
+    } else
     alert(`Приятных подсчетов! ${name}`);
     }
 
