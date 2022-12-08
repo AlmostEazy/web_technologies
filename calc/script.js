@@ -24,6 +24,9 @@ myCalc.addEventListener("click", function (event) {
             if(result.innerText.search(/[^0-9*/+-.]/mi) !== -1) return;
 
             result.innerText = eval(result.innerText).toFixed(2)
+            if(result.innerText === "Infinity") {
+                result.innerText = "Error"
+            }
             break;
         default:
             result.innerText += value;
