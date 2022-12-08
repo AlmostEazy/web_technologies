@@ -1,5 +1,11 @@
-let name = prompt("Как Вас зовут?");
-alert(`Приятных подсчетов! ${name}`)
+
+
+function showMessage(){
+    let name = prompt("Как Вас зовут?");
+    alert(`Приятных подсчетов! ${name}`);
+    }
+
+showMessage();
 
 
 const myCalc = document.querySelector(".my__calculator");
@@ -22,5 +28,4 @@ myCalc.addEventListener("click", function (event) {
         default:
             result.innerText += value;
     }
-
-})
+});
