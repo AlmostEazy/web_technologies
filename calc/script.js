@@ -23,9 +23,11 @@ myCalc.addEventListener("click", function (event) {
         case "=":
             if(result.innerText.search(/[^0-9*/+-.]/mi) !== -1) return;
 
-            result.innerText = eval(result.innerText).toFixed(2)
-            if(result.innerText === "Infinity") {
+            let intResult = eval(result.innerText)
+            if(intResult === Infinity) {
                 result.innerText = "Error"
+            } else {
+                result.innerText = intResult.toFixed(2)
             }
             break;
         default:
